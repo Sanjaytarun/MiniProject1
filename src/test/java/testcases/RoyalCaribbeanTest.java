@@ -15,7 +15,7 @@ public class RoyalCaribbeanTest extends BaseTest {
 
     RoyalCaribbeanPage page;
 
-    @Test(priority = 1)
+    @Test(priority = 101)
     public void verifySearchTest() {
         try {
             page = new RoyalCaribbeanPage(driver);
@@ -31,7 +31,7 @@ public class RoyalCaribbeanTest extends BaseTest {
     }
 
 
-    @Test(priority = 2, dependsOnMethods = "verifySearchTest",dataProvider = "sanjay")
+    @Test(priority = 102, dependsOnMethods = "verifySearchTest",dataProvider = "sanju")
     public void searchShipTest() {
         try {
             page.searchShip();
@@ -44,7 +44,7 @@ public class RoyalCaribbeanTest extends BaseTest {
         }
     }
 
-    @Test(priority = 3, dependsOnMethods = "searchShipTest")
+    @Test(priority = 103, dependsOnMethods = "searchShipTest")
     public void clickBookNowTest() {
         try {
             page.clickBookNow();
@@ -56,7 +56,7 @@ public class RoyalCaribbeanTest extends BaseTest {
         }
     }
 
-    @Test(priority = 4, dependsOnMethods = "clickBookNowTest")
+    @Test(priority = 104, dependsOnMethods = "clickBookNowTest")
     public void applyFiltersTest() {
         try {
             page.applyFilters();
@@ -68,7 +68,7 @@ public class RoyalCaribbeanTest extends BaseTest {
         }
     }
 
-    @Test(priority = 5, dependsOnMethods = "applyFiltersTest")
+    @Test(priority = 105, dependsOnMethods = "applyFiltersTest")
     public void sortTest() {
         try {
             page.sortResults();
@@ -78,7 +78,7 @@ public class RoyalCaribbeanTest extends BaseTest {
             Assert.fail();
         }
     }
-    @DataProvider(name = "sanjay")
+    @DataProvider(name = "sanju")
     public Object[][] testDate(){
         Object[][] n={{"sanjay"},
                 {"sanju"},
