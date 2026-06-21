@@ -34,6 +34,7 @@ public class RoyalCaribbeanTest extends BaseTest {
     @Test(priority = 102, dependsOnMethods = "verifySearchTest",dataProvider = "sanju")
     public void searchShipTest() {
         try {
+            //this is searchShipTest
             page.searchShip();
             Assert.assertTrue(driver.getTitle().contains("Rhapsody"));
             PdfReportUtil.log("Step 2 Passed: Ship searched");
@@ -46,6 +47,7 @@ public class RoyalCaribbeanTest extends BaseTest {
 
     @Test(priority = 103, dependsOnMethods = "searchShipTest")
     public void clickBookNowTest() {
+        // This is clickBookNowTest
         try {
             page.clickBookNow();
             PdfReportUtil.log("Step 3 Passed: Book Now clicked");
